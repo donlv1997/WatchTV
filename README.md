@@ -170,6 +170,16 @@ NodeMediaClient的Demo可以在[GitHub](https://github.com/NodeMedia/NodeMediaCl
 
 ```
 <br> <br> 
+#如何更新信源
+<br> <br> 
+请在cn.nodeMedia.demo中的Menu.java的initChannel()函数中添加新频道。初始化格式为(电台名称，电台地址，图标)，电台的图标放在drawable文件夹中，请看示例:
+```javascript
+        Item cctv1 = new Item
+                ("CCTV1", "http://223.110.241.204:6610/cntv/live1/HD-2500k-1080P-cctv1/HD-2500k-1080P-cctv1", R.drawable.cctv1);
+        itemList.add(cctv1);
+```
+
+<br> <br> 
 # 播放效果演示
 <br> <br> 
 
