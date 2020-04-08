@@ -2,8 +2,9 @@
 <br> 
 一个有菜单动画效果的看电视APP
 <br> 
-<div align=center><img width="300" height="300" src="http://chuantu.xyz/t6/702/1567511478x3030586988.jpg"/></div>
+<div align=center><img width="300" height="300" src="https://github.com/donlv1997/WatchTV/raw/master/app/src/main/res/drawable/tv.jpg"/></div>
 <br> <br> 
+
 ## 内置播放器NodeMediaClient
 <br> <br> 
 NodeMediaClient的Demo可以在[GitHub](https://github.com/NodeMedia/NodeMediaClient-Android/tree/2.x)上找到，这里简要介绍Tips：
@@ -37,8 +38,9 @@ NodeMediaClient的Demo可以在[GitHub](https://github.com/NodeMedia/NodeMediaCl
 	}
 ```
 <br> 
-* 在播放器的Activity界面，本APP利用了PlayUrl函数来实现对指定地址（RTSP、HTTP等直播源）进行播放
+## 在播放器的Activity界面，本APP利用了PlayUrl函数来实现对指定地址（RTSP、HTTP等直播源）进行播放
 <br> 
+
 ```javascript
  
 	public void PlayUrl(String url, NodePlayerView npv) {
@@ -73,9 +75,9 @@ NodeMediaClient的Demo可以在[GitHub](https://github.com/NodeMedia/NodeMediaCl
         np.start();
 	}	
 ```
- <br> 
+
 * 还要注意，不要忘记重写回调函数，该回调函数可以实现播放状态的获取，具体可以看GitHub上的Demo程序。本APP没有实现这些复杂的功能
- <br> 
+
 ```javascript
  
      @Override
@@ -97,9 +99,9 @@ NodeMediaClient的Demo可以在[GitHub](https://github.com/NodeMedia/NodeMediaCl
 		implementation 'jp.wasabeef:recyclerview-animators:2.3.0'
 	}
 ```
-<br> 
+
 本APP主要利用了其中的adaptor animator，使用了放大Adaptor和逐渐出现adaptor的两级动画嵌套，更多用法请参考项目源码
-<br> 
+
 ```javascript
         ItemAdapter adapter = new ItemAdapter(itemList);
         recyclerView.setAdapter(adapter);
@@ -111,9 +113,9 @@ NodeMediaClient的Demo可以在[GitHub](https://github.com/NodeMedia/NodeMediaCl
         alphaInAnimationAdapter.setFirstOnly(false);
         recyclerView.setAdapter(alphaInAnimationAdapter);
 ```
-<br> 
+
 关于标题栏渐隐的实现方法，也在下面给出：
-<br> 
+
 ```javascript
 // topbar是自定义的标题栏,下面这段实现了标题栏随着拖动渐隐和出现
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -169,19 +171,19 @@ NodeMediaClient的Demo可以在[GitHub](https://github.com/NodeMedia/NodeMediaCl
     }
 
 ```
-<br> <br> 
-#如何更新信源
-<br> <br> 
+
+# 如何更新信源
+
 请在cn.nodeMedia.demo中的Menu.java的initChannel()函数中添加新频道。初始化格式为(电台名称，电台地址，图标)，电台的图标放在drawable文件夹中，请看示例:
+
 ```javascript
         Item cctv1 = new Item
                 ("CCTV1", "http://223.110.241.204:6610/cntv/live1/HD-2500k-1080P-cctv1/HD-2500k-1080P-cctv1", R.drawable.cctv1);
         itemList.add(cctv1);
 ```
 
-<br> <br> 
+
 # 播放效果演示
-<br> <br> 
 
 ![demo](http://chuantu.xyz/t6/702/1567511971x3030586988.png)
 <br> 
