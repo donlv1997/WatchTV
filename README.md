@@ -185,7 +185,7 @@ NodeMediaClient的Demo可以在[GitHub](https://github.com/NodeMedia/NodeMediaCl
 
 # 播放效果演示
 
-![demo](http://chuantu.xyz/t6/702/1567511971x3030586988.png)
+![demo](https://github.com/donlv1997/imageResource/raw/master/Screenshot_1567680327.png)
 <br> 
 
-![demo](http://chuantu.xyz/t6/702/1567512075x3030586988.png)
+![demo](https://github.com/donlv1997/imageResource/raw/master/Screenshot_1567680319.png)
